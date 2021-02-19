@@ -102,6 +102,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	printf("\r\nLPuart1 is ok!");
 	printf("\r\nNo1 CeShi!");
+	printf("\r\nNo2 CeShi!");
   /* USER CODE END 2 */
 
   /* Infinite loop */
