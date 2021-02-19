@@ -101,7 +101,7 @@ int main(void)
   MX_LPUART1_UART_Init();
   /* USER CODE BEGIN 2 */
 	printf("\r\nLPuart1 is ok!");
-	printf("\r\nNo4 CeShi!");
+	printf("\r\nNo5 CeShi!");
   /* USER CODE END 2 */
 
   /* Infinite loop */
