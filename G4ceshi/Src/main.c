@@ -103,6 +103,7 @@ int main(void)
 	printf("\r\nLPuart1 is ok!");
 	printf("\r\nNo1 CeShi!");
 	printf("\r\nNo2 CeShi!");
+	printf("\r\nNo3 CeShi!");
   /* USER CODE END 2 */
 
   /* Infinite loop */
