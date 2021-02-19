@@ -22,7 +22,7 @@
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "stdio.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -56,7 +56,18 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+	#ifdef __GNUC__
+	 
+		#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+	#else
+		#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+	#endif
+	 
+	PUTCHAR_PROTOTYPE
+	{
+		 HAL_UART_Transmit(&hlpuart1, (uint8_t *)(&(ch)), 1, 10);
+		 return ch;
+	}
 /* USER CODE END 0 */
 
 /**
@@ -89,7 +100,8 @@ int main(void)
   MX_GPIO_Init();
   MX_LPUART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	printf("\r\nLPuart1 is ok!");
+	printf("\r\nNo1 CeShi!");
   /* USER CODE END 2 */
 
   /* Infinite loop */
